@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time in JavaScript</title>
+    <style>
+        .container{
+            padding: 20px;
+            background-color: blanchedalmond;
+            border: 2px solid blue;
+            border-radius: 10px;
+            box-shadow: 10px 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        p{
+            display:block;
+            color:rgb(255, 0, 0);
+        }
+        span{
+            color:rgb(127, 148, 6);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        This is container displaying the time.
+        <p>Current Time is<span id="time"></span></p>
+    </div>
+    <script>
+        console.log("This is date and time in javascript.");
+        let now = new Date()
+        console.log(now);
+
+        let ref_date = new Date(0)
+        console.log(ref_date); // Showing time after said number of miliseconds..
+
+        let futuristic_date = new Date("2099-01-01");
+        console.log(futuristic_date);
+
+        let hands_on_date = new Date(30000, 4, 1, 2, 23, 12, 33);
+        console.log(hands_on_date);
+
+        let year = hands_on_date.getFullYear();
+        console.log(year);
+
+        let date_ = hands_on_date.getDate();
+        console.log(date_);
+        
+        let month_ = hands_on_date.getMonth();
+        console.log(month_);
+        
+        let hour_ = hands_on_date.getHours();
+        console.log(hour_);
+
+        let min_ = hands_on_date.getMinutes();
+        console.log(min_);
+
+        let sec_ = hands_on_date.getSeconds();
+        console.log(sec_);
+
+        let milisec_ = hands_on_date.getMilliseconds();
+        console.log(milisec_);
+
+        // We can auto-correct the date and time as well.
+        
+        // Even if we provide an invalid date or time, set*wateva*() corrects itself..
+        hands_on_date.setDate(36);
+        console.log(hands_on_date);
+
+        function displayTime(){
+            time.innerHTML = new Date()
+        }
+        setInterval(displayTime, 1000);
+        
+
+    </script>
+</body>
+</html>

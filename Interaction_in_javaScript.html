@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction in JavaScript using Promt and others</title>
+    <style>
+        #button{
+            font-style:italic;
+            font-weight:bold;
+            font-size: 12px;
+            background-color: aqua;
+            padding: 5px 10px;
+            border: 2px red solid;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        span{
+            display:block;
+            margin-bottom: 10px;;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is the heading.</h1>
+    <!-- <span id="time">The time now is:</span> -->
+    <button id="button" onclick="toggleHide()">Show Details</button>
+</body>
+<script>
+    // Alert does not return anything.
+    // alert("This is an alert");
+
+    // Prompt takes in an entry and stores it. We can also print it.
+    // let name = prompt("What is your name guest?",""); // It takes another default argument in case some browsers does not support it. 
+    // console.log(name);
+
+    // let deletePost = confirm("Do you really want to delete this post?");
+    // if (deletePost){
+    //     console.log("Your post has been deleted.");
+    // }
+    // else{
+    //     console.log("Your post has not been deleted.");
+    // }
+    // let para_var = document.getElementById('para');
+
+    // We can directly target the element while adding event by their id names.
+
+    // para.addEventListener('mouseover', function(){
+    //     console.log('Mouse is on the Para.');
+    // })
+    // para_var.addEventListener('mouseover', function(){
+    //     console.log("Mouse is over the para.");
+    // })
+    // para_var.addEventListener('mouseout', function(){
+    //     console.log("Mouse is out of the para.");
+    // })
+    // function toggleHide(){
+    //     if (para.style.display!='none'){
+    //         para.style.display = 'none';
+    //     }
+    //     else{
+    //         para.style.display = 'block';
+    //     }
+    // }
+
+    function displayTime(){
+        time = new Date();
+        console.log(time);
+        // document.getElementById('time').innerHTML = time;
+    }
+    setInterval(displayTime, 1000);
+    stop_time = setInterval(displayTime, 1000);
+    clearInterval(stop_time);
+
+</script>
+</html>

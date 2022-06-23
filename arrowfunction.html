@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow Function in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        Hello!
+    </div>
+    <script>
+        // function greet(){
+        //     console.log("Hello! This is normal Greet Function.");
+        // }
+
+        // let greet = ()=>{
+        //     console.log("Arrow Function Greet.");
+        // }
+        // greet();
+
+        // ARROW FUNCTION IS THE SHIT !!!!
+
+        let sum = (a,b)=>{
+            console.log(a+b);
+        };
+
+        // Even more short cut..
+        let sum2 = (c,d)=> c+d;
+
+        // If we have single argument then we can ignore the paranthesis..
+        let half = a => a/2;
+        // if there are no arguments then we have to add paranthesis..
+        let hello = ()=> console.log("We are inside the hello.")
+
+        // 'this' of arrow function points to any 'this' within its scope..
+        // Arrow function points to 'this' of its parent..
+        let obj1 = {
+            greetings: "Good Morning",
+            names: ['Harry', 'Vivek', 'Shubham'],
+            speak(){
+                this.names.forEach((students)=>{
+                    console.log(this.greetings+" yoyo " + students);
+                });
+            }
+        }
+
+        obj1.speak();
+    </script>
+</body>
+</html>
